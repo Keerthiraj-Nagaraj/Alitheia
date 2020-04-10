@@ -79,8 +79,8 @@ def clean_text(text):
 
 #%%
 
-fake = pd.read_csv('all_fake.csv', nrows = 100000)
-reliable = pd.read_csv('all_reliable.csv', nrows = 100000)
+fake = pd.read_csv('sample_fake.csv', nrows = 100000)
+reliable = pd.read_csv('sample_reliable.csv', nrows = 100000)
 
 fr = [fake, reliable]
 fakedata = pd.concat(fr)
@@ -88,6 +88,8 @@ fakedata = pd.concat(fr)
 fakedata['content'] = fakedata['content'].apply(clean_text)
 
 #%%
+
+
 
 # =============================================================================
 # Machine learning with TF-IDF
@@ -97,6 +99,12 @@ print('Printing Machine Learning results..... ')
 
 tf = TfidfVectorizer()
 x_tf = tf.fit_transform(fakedata['content'])
+
+#%%
+
+# saving
+with open('alitheia_tfidf_vectorizer.pickle', 'wb') as handle:
+    pickle.dump(tf, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 #%%
 

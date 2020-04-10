@@ -2,7 +2,7 @@
 """
 Created on Wed Apr  8 13:39:42 2020
 
-@author: keert
+@author: keerthiraj
 """
 
 # Functions for alithea app

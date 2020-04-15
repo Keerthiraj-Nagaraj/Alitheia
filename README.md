@@ -1,6 +1,6 @@
-# Alitheia 
+# Alitheia (Greek: The Truth)
 
-### Objective: Train Machine Learning models using data from FakeNewsCorpus to generate credibility score for text articles, and to obtain relevant tweets from credible sources. 
+Objective: Train Machine Learning models using data from FakeNewsCorpus to generate credibility score for text articles, and to obtain relevant tweets from credible sources. 
 
 ### Dataset preparation:
 
@@ -37,6 +37,7 @@ Relevant tweets extracter - relevant_tweets(sample_text, username = ['nytimes'])
  - NumPy
  - Pandas
  - NLTK
+ - re
  - Scikit-learn
  - Keras
  - Pickle
